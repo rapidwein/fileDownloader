@@ -8,9 +8,14 @@ from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 import os
 def main():
+  server_path = os.getcwd() + "/Server"
+  try:
+    os.stat(server_path)
+  except:
+    os.mkdir(server_path)
   authorizer = DummyAuthorizer()
-  authorizer.add_user("user","12345",".", perm='elradfmwM')
-  authorizer.add_anonymous(os.getcwd())
+  authorizer.add_user("user","12345",server_path, perm='elradfmwM')
+  authorizer.add_anonymous(server_path)
   
   handler = FTPHandler
   handler.authorizer = authorizer
