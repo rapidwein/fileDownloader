@@ -5,12 +5,15 @@ Simple FTP server and a file downloader from the server
 ##Setup
 
 Set up using:
+
 python setup.py install
 
 ##File Server
 Run Server as:
 
 python server.py
+
+This creates a dummy FS in the current directory by creating a Server/ subdirectory. Put all files and directories for the file server in this directory
 
 ##Client
 
