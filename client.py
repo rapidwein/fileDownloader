@@ -1,3 +1,8 @@
+#!/usr/bin/python
+#Arguments:
+#"file_to_download" - file to download from ftp server
+#"destination_dir" - destination directory in local fs
+
 import sys
 import os
 import ftplib
@@ -68,8 +73,9 @@ def main():
 
   file_path = fdir+file_name
 
-  #merge all part files
+  #check if file already exists in destination directory
   if os.path.isfile(file_path) == False:
+    #merge all part files
     for x in range(5):
       file_part_path = fdir+file_name+".part"+str(x)
       try:

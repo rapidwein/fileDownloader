@@ -1,7 +1,5 @@
 #!/usr/bin/python
-#Arguments:
-#"file_to_download" - file to download from ftp server
-#"destination_dir" - destination directory in local fs
+#pyftpdlib FTP server
 
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
