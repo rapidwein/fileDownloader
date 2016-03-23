@@ -22,8 +22,8 @@ def main():
   handler.banner = "server ready"
   address = ('localhost', 2121)
   server = FTPServer(address,handler)
-  server.max_cons = 256
-  server.max_cons_per_ip = 5
+  #server.max_cons = 256
+  #server.max_cons_per_ip = 10
   server.serve_forever()
 
 if __name__ == '__main__':
