@@ -12,6 +12,8 @@ Run Server as:
 
 python server.py
 
+This creates a dummy FS in the current directory by creating a Server/ subdirectory. Put all files and directories for the file server in this directory
+
 ##Client
 
 Run client as:
