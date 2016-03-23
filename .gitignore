@@ -1,2 +1,4 @@
 Server/
 *.egg-info/
+build/
+dist/
